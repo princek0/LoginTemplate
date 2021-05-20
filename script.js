@@ -16,15 +16,15 @@ function realtimeClock() {
 }
 
 function validate() {
+  event.preventDefault();
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
   if ( username == "Test" && password == "Test"){
-    alert ("Successful login.")
-    window.location = "success.html";
+    document.getElementById("h1").innerHTML = "Successful login";
     return false;
   }
   else{
-    alert ("Unsuccessful login.")
+    document.getElementById("h1").innerHTML = "Unsuccessful login";
     return false;
   }
 }
